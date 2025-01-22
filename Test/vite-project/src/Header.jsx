@@ -49,6 +49,8 @@ const Header = () => {
                 </ul>
             </nav>
     </header>
+
+    <script src="./script.js"></script>
     
     </>
   )
