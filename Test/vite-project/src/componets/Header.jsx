@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './app.css';
 
 const Header = () => {
+  useEffect(() => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinksContainer = document.querySelector('.nav-links');
+
+    mobileMenu.addEventListener('click', () => {
+      navLinksContainer.classList.toggle('active');
+    });
+  }, []);
+
   return ( 
    <>
     <header>
@@ -49,12 +58,8 @@ const Header = () => {
                 </ul>
             </nav>
     </header>
-
-    <script src="./script.js"></script>
-    
     </>
   )
-
 }
 
 export default Header;
