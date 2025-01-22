@@ -20,6 +20,7 @@ body {
     text-align: left;
 }
 
+
 header {
     width: 100%;
     max-width: 800px;
@@ -523,6 +524,11 @@ footer {
   
 
 @media (max-width: 500px) {
+    .main {
+        margin: 1rem;
+        
+    }
+    
     .menu-toggle {
         display: flex;
     }
@@ -532,7 +538,7 @@ footer {
         flex-direction: column;
         background-color: #333;
         top: 9rem;
-        left: 35px;
+        left: 0; /* Adjusted left position */
         width: 100%; /* Adjusted width */
         padding: 1rem; /* Adjusted padding */
         text-align: left;

@@ -13,6 +13,7 @@ const Project1 = () => {
 
   return (
     <>
+    <main>
       <section className="intro-card">
         <div className="media-column">
           <h1>Stalltid</h1>
@@ -146,6 +147,7 @@ const Project1 = () => {
           <li>Prototyping</li>
         </ul>
       </section>
+    </main>
     </>
   );
 }
