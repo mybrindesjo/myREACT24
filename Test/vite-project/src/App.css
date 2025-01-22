@@ -522,7 +522,7 @@ footer {
     padding: 5px 10px;
   }
   
-
+/* MEDIA QUERIES = MAX SKÄRMSTORLEK 500PX (MOBIL) */
 @media (max-width: 500px) {
     .main {
         margin: 1rem;
@@ -554,6 +554,7 @@ footer {
     }
 }
 
+/* MEDIA QUERIES = MAX SKÄRMSTORLEK 1024PX (DESKTOP) */
 @media (min-width: 1024px) {
 
     main {
