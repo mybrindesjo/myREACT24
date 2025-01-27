@@ -1,17 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Navbar = ({ links = [] }) => {
+const Navbar = () => {
   return (
-    <nav className="navbar">
-      <ul className="nav-links">
-        {links.map((link, index) => (
-          <li key={index}>
-            <Link className="nav-link" to={link.href}>{link.name}</Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      <nav className="navbar">
+        <div className="menu-toggle" id="mobile-menu">
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+        <ul className="nav-links">
+          <li><a className="nav-link" href="/home">Home</a></li>
+          <li><a className="nav-link" href="/about">About</a></li>
+          <li><a className="nav-link" href="/projects">Projects</a></li>
+          <li><a className="nav-link" href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </>
   );
 }
 

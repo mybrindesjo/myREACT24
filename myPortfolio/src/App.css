@@ -20,8 +20,7 @@ body {
     text-align: left;
 }
 
-
-header {
+main, header {
     width: 100%;
     max-width: 800px;
     display: flex;
@@ -35,9 +34,12 @@ header {
     padding: 1rem;
     border-radius: 10px;
     margin-bottom: 2rem;
+}
+
+.nav-links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    list-style: none;
 }
 
 .nav-link {
@@ -49,26 +51,6 @@ header {
 
 .nav-link:hover {
     background: #ff6d40;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 20px;
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 3px 0;
 }
 
 .container {
@@ -492,13 +474,21 @@ footer {
 }
 
 /* Grundläggande stil för navbar */
-
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
 
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
     gap: 20px;
+    justify-content: space-between;
 
 }
 
@@ -544,13 +534,8 @@ footer {
     padding: 5px 10px;
   }
   
-/* MEDIA QUERIES = MAX SKÄRMSTORLEK 500PX (MOBIL) */
+
 @media (max-width: 500px) {
-    .main {
-        margin: 1rem;
-        
-    }
-    
     .menu-toggle {
         display: flex;
     }
@@ -560,9 +545,9 @@ footer {
         flex-direction: column;
         background-color: #333;
         top: 9rem;
-        left: 0; /* Adjusted left position */
-        width: 100%; /* Adjusted width */
-        padding: 1rem; /* Adjusted padding */
+        left: 35px;
+        width: 30px;
+        padding: 5rem;
         text-align: left;
         border-radius: 0 0 10px 10px;
     }
@@ -576,7 +561,6 @@ footer {
     }
 }
 
-/* MEDIA QUERIES = MAX SKÄRMSTORLEK 1024PX (DESKTOP) */
 @media (min-width: 1024px) {
 
     main {
@@ -676,8 +660,5 @@ footer {
         align-items: flex-start;
 
     }
-
-
-
 
 }

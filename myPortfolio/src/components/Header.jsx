@@ -1,49 +1,51 @@
 import React from 'react';
 
-const profileInfo = {
-  name: "My Brindesjö",
-  username: "@mybrindesjo",
-  details: [
-    "💡 ⎸ UX-designer",
-    "🎨 ⎸ UI-designer",
-    "👩🏼‍💻 ⎸ Frontendutvecklare",
-    "🛠️ ⎸ Figma och VS code",
-    "🎓 ⎸ Chas Academy",
-    "📍 ⎸ Stockholm, Sverige"
-  ],
-  socialLinks: [
-    { href: "mailto:my.brindesjo@gmail.com", src: "./icon/gmail.png", alt: "Gmail" },
-    { href: "https://github.com/mybrindesjo/myUXF24", src: "./img/github.png", alt: "Github" },
-    { href: "https://www.linkedin.com/in/mybrindesjo/", src: "./img/linkedin.png", alt: "LinkedIn" }
-  ]
-};
-
-const Header = () => {
-  return (
-    <header>
-      <section className="container">
-        <div className="profile-picture">
-          <img src="./img/profilePicture.png" alt="Profile Picture" width="150" height="150" />
-        </div>
-        <div className="column">
-          <div className="about-intro">
-            <h1 className="name">{profileInfo.name}</h1>
-            <h3 className="username">{profileInfo.username}</h3>
-            {profileInfo.details.map((detail, index) => (
-              <p key={index}>{detail}</p>
-            ))}
-          </div>
-          <div className="social-links">
-            {profileInfo.socialLinks.map((link, index) => (
-              <a key={index} href={link.href} target="_blank" rel="noopener noreferrer">
-                <img src={link.src} alt={link.alt} className="social-img" width="50" height="50" />
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-    </header>
-  );
+function Header() {
+    return (
+        <header>
+            <section className="container">
+                <div className="profile-picture">
+                    <img src="./img/profilePicture.png" alt="Profile Picture" width="150" height="150" />
+                </div>
+                <div className="column">
+                    <div className="about-intro">
+                        <h1 className="name">My Brindesjö</h1>
+                        <h3 className="username">@mybrindesjo</h3>
+                        <p>💡 ⎸ UX-designer</p>
+                        <p>🎨 ⎸ UI-designer</p>
+                        <p>👩🏼‍💻 ⎸ Frontendutvecklare</p>
+                        <p>🛠️ ⎸ Figma och VS code</p>
+                        <p>🎓 ⎸ Chas Academy</p>
+                        <p>📍 ⎸ Stockholm, Sverige</p>
+                    </div>
+                    <div className="social-links">
+                        <a href="mailto:my.brindesjo@gmail.com">
+                            <img src="./icon/gmail.png" alt="Figma" className="social-img" width="50" height="50" />
+                        </a>
+                        <a href="https://github.com/mybrindesjo/myUXF24" target="_blank">
+                            <img src="./img/github.png" alt="Github" className="social-img" width="50" height="50" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/mybrindesjo/" target="_blank">
+                            <img src="./img/linkedin.png" alt="LinkedIn" className="social-img" width="50" height="50" />
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <nav className="navbar">
+                <div className="menu-toggle" id="mobile-menu">
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                </div>
+                <ul className="nav-links">
+                    <li><a className="nav-link" href="/home">Home</a></li>
+                    <li><a className="nav-link" href="/about">About</a></li>
+                    <li><a className="nav-link" href="/projects">Projects</a></li>
+                    <li><a className="nav-link" href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    );
 }
 
 export default Header;
