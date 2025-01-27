@@ -29,17 +29,17 @@ main, header {
 }
 
 .navbar {
-    width: 100%;
     background: rgba(0, 0, 0, 0.8);
-    padding: 1rem;
     border-radius: 10px;
     margin-bottom: 2rem;
 }
 
 .nav-links {
     display: flex;
-    justify-content: space-around;
     list-style: none;
+    gap: 1rem;
+    justify-content: space-between;
+
 }
 
 .nav-link {
@@ -660,5 +660,4 @@ footer {
         align-items: flex-start;
 
     }
-
 }
