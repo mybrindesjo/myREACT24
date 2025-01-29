@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProjectSection = ({ title, projects }) => (
-    <section className="project-card">
+    <div  className="project-card">
         <div className="project-header">
             <h2>{title}</h2>
         </div>
@@ -24,7 +24,7 @@ const ProjectSection = ({ title, projects }) => (
                 </div>
             </div>
         ))}
-    </section>
+    </div>
 );
 
 export default ProjectSection;

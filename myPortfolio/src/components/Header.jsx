@@ -8,13 +8,13 @@ function Header() {
     return (
         <>
             <header>
-                <section className="container">
+                <div className="container">
                     <ProfilePicture />
                     <div className="column">
                         <AboutIntro />
                         <SocialLinks />
                     </div>
-                </section>
+                </div>
                 <Navbar />
             </header>
         </>

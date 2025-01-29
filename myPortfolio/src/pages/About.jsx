@@ -1,9 +1,9 @@
 import React from 'react';
-import InfoCard from './InfoCard'; // Import the new InfoCard component
-import IntroCard from './IntroCard'; // Import the new IntroCard component
-import ExperienceCard from './ExperienceCard'; // Import the new ExperienceCard component
-import SkillList from './SkillList'; // Import the new SkillList component
-import CourseList from './CourseList'; // Import the new CourseList component
+import InfoCard from '../components/InfoCard'; // Import the new InfoCard component
+import IntroCard from '../components/IntroCard'; // Import the new IntroCard component
+import ExperienceCard from '../components/ExperienceCard'; // Import the new ExperienceCard component
+import SkillList from '../components/SkillList'; // Import the new SkillList component
+import CourseList from '../components/CourseList'; // Import the new CourseList component
 
 
 function About() {
@@ -20,7 +20,7 @@ function About() {
                     villig att lära mig mer. Andra beskriver mig som hjälpsam, ordningsam 
                     och trevlig – egenskaper som jag strävar efter att ta med mig i allt jag gör."
             />
-            <section className="info-container">
+            <div className="info-container">
                 <h2>Erfarenheter</h2>
                 <div className="media-row">
                     <ExperienceCard 
@@ -43,9 +43,9 @@ function About() {
                             träning i att leda och inspirera andra."
                     />
                 </div>
-            </section>
+            </div>
             <div className="media-row">
-                <section className="info-container">
+                <div className="info-container">
                     <h2>Arbetslivserfarenhet</h2>
                     <InfoCard 
                         imgSrc="./img/skansen.jpeg" 
@@ -68,8 +68,8 @@ function About() {
                         subtitle="Hästskötare" 
                         date="apr. 2022 - apr. 2023" 
                     />
-                </section>
-                <section className="info-container">
+                </div>
+                <div className="info-container">
                     <h2>Utbildning</h2>
                     <InfoCard 
                         imgSrc="./img/chasacademy.jpeg" 
@@ -107,9 +107,9 @@ function About() {
                         subtitle="Samhällskunskap med inriktning häst" 
                         date="2020 - 2021" 
                     />
-                </section>
+                </div>
             </div>
-            <section className="info-container">
+            <div className="info-container">
                 <h2>Kompetenser</h2>
                 <SkillList skills={[
                     "Figma", "HTML & CSS", "JavaScript", "React", "UX Research", "Wireframing", 
@@ -123,7 +123,7 @@ function About() {
                     "Hästar", "B-körkort", "Jordbrukstraktor", "Svetsning", "Röjsåg", "Terränghjuling", 
                     "Scoutledare", "Vård och omsorg", "Städning"
                 ]} />
-            </section>
+            </div>
         </main>
     );
 }

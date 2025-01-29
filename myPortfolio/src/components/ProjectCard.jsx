@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProjectCard = ({ title, description, images }) => (
-    <article className="project-card">
+    <div className="project-card">
         <div className="project-header">
             <h2>{title}</h2>
             <p>{description}</p>
@@ -9,7 +9,7 @@ const ProjectCard = ({ title, description, images }) => (
         {images && images.map((image, index) => (
             <img key={index} className="project-img" src={image.src} alt={image.alt} />
         ))}
-    </article>
+    </div>
 );
 
 export default ProjectCard;
