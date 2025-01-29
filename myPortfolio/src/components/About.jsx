@@ -8,7 +8,17 @@ import CourseList from './CourseList'; // Import the new CourseList component
 function About() {
     return (
         <main>
-            <IntroCard />
+            <IntroCard 
+                imgSrc="./img/my.jpeg" 
+                imgAlt="me-picture" 
+                title="Vem är jag?" 
+                subtitle="UX/UI-designerstudent med bred erfarenhet och starkt driv!" 
+                description="Jag heter My Brindesjö, 20 år gammal och bor i Solna. 
+                    Just nu studerar jag till UX/UI-designer med frontendkompetens 
+                    på Chas Academy. Som person är jag glad, ansvarstagande och alltid 
+                    villig att lära mig mer. Andra beskriver mig som hjälpsam, ordningsam 
+                    och trevlig – egenskaper som jag strävar efter att ta med mig i allt jag gör."
+            />
             <section className="info-container">
                 <h2>Erfarenheter</h2>
                 <div className="media-row">
@@ -37,8 +47,8 @@ function About() {
                 <section className="info-container">
                     <h2>Arbetslivserfarenhet</h2>
                     <InfoCard 
-                        imgSrc="./img/skansen_logo.jpeg" 
-                        imgAlt="skansen_logo" 
+                        imgSrc="./img/skansen.jpeg" 
+                        imgAlt="Skansen" 
                         title="Skansen" 
                         subtitle="Lokalvårdare" 
                         date="nov. 2023 – nu" 
@@ -52,7 +62,7 @@ function About() {
                     />
                     <InfoCard 
                         imgSrc="./img/bollerup.png" 
-                        imgAlt="bollerups_logo" 
+                        imgAlt="Bollerups naturbruksgymnasium" 
                         title="Bollerups naturbruksgymnasium" 
                         subtitle="Hästskötare" 
                         date="apr. 2022 - apr. 2023" 
@@ -61,7 +71,7 @@ function About() {
                 <section className="info-container">
                     <h2>Utbildning</h2>
                     <InfoCard 
-                        imgSrc="./img/nedladdning.jpeg" 
+                        imgSrc="./img/chasacademy.jpeg" 
                         imgAlt="Chas Academy" 
                         title="Chas Academy" 
                         subtitle="UX/UI-designer med frontendkompetens" 
@@ -69,7 +79,16 @@ function About() {
                         extraContent={
                             <>
                                 <h4>Kurser:</h4>
-                                <CourseList />
+                                <CourseList courses={[
+                                    "01. IT Tech and Operations",
+                                    "02. UI-design och grafisk formgivning",
+                                    "03. Grundläggande frontendprogrammering",
+                                    "04. React",
+                                    "05. UX/UI, interaktionsdesign med agilt arbetssätt",
+                                    "06. Fördjupad interaktionsdesign",
+                                    "07. LIA",
+                                    "08. Examensarbete"
+                                ]} />
                             </>
                         }
                     />
@@ -82,7 +101,7 @@ function About() {
                     />
                     <InfoCard 
                         imgSrc="./img/bollerup.png" 
-                        imgAlt="Strängnäs kommun" 
+                        imgAlt="Bollerups naturbruksgymnasium" 
                         title="Bollerups naturbruksgymnasium" 
                         subtitle="Samhällskunskap med inriktning häst" 
                         date="2020 - 2021" 
@@ -91,7 +110,18 @@ function About() {
             </div>
             <section className="info-container">
                 <h2>Kompetenser</h2>
-                <SkillList />
+                <SkillList skills={[
+                    "Figma", "HTML & CSS", "JavaScript", "React", "UX Research", "Wireframing", 
+                    "Prototyping", "Usability Testing", "Responsive Design", "Design Systems", 
+                    "VS Code", "GitHub", "Användartester", "Visuell design", 
+                    "Web Content Accessibility Guidelines (WCAG)", "Logotypdesign", "Projektplanering", 
+                    "Typografi", "Färgteori", "Dokumentation", "Designtänkande", "Designmönster", 
+                    "Analytisk förmåga", "Grupparbete", "Användarorienterad design", "Slack", 
+                    "Användbarhet", "Användarupplevelse", "UX-design", "UI-design", "Interaktionsdesign", 
+                    "Programmering", "Frontend-utveckling", "Svenska", "Engelska", "Hästskötare", 
+                    "Hästar", "B-körkort", "Jordbrukstraktor", "Svetsning", "Röjsåg", "Terränghjuling", 
+                    "Scoutledare", "Vård och omsorg", "Städning"
+                ]} />
             </section>
         </main>
     );
