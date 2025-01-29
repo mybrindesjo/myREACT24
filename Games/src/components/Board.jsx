@@ -1,17 +1,21 @@
 import Square from "./Square";
-import { calculateWinner } from "../App"; // Ensure the correct import path
 
 const Board = ({ xIsNext, squares, onPlay }) => {
   const handleClick = (index) => {
-    if (squares[index] || calculateWinner(squares)) {
+    const valueExistAtIndex = squares[index];
+    const winnerFound = calculateWinner(squares);
+
+    if (valueExistAtIndex || winnerFound) {
       return;
     }
+
     const nextSquares = squares.slice();
     if (xIsNext) {
       nextSquares[index] = "X";
     } else {
       nextSquares[index] = "O";
     }
+
     onPlay(nextSquares);
   };
 
@@ -28,7 +32,11 @@ const Board = ({ xIsNext, squares, onPlay }) => {
       <div className="status">{status}</div>
       <div className="board">
         {squares.map((value, index) => (
-          <Square key={index} value={value} onSquareClick={() => handleClick(index)} />
+          <Square
+            key={index}
+            value={value}
+            onSquareClick={() => handleClick(index)}
+          />
         ))}
       </div>
     </>
@@ -36,3 +44,25 @@ const Board = ({ xIsNext, squares, onPlay }) => {
 };
 
 export default Board;
+
+const calculateWinner = (squares) => {
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+
+  for (let i = 0; i < lines.length; i++) {
+    const [a, b, c] = lines[i];
+    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      return squares[a];
+    }
+  }
+
+  return null;
+};

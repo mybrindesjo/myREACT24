@@ -17,7 +17,7 @@ const ProjectSection = ({ title, projects }) => (
                         <button className="project-btn">
                             <a href={project.link} target="_blank">Se prototypen här</a>
                         </button>
-                        {project.images.map((image, index) => (
+                        {project.images && project.images.map((image, index) => (
                             <img key={index} className="project-img" src={image.src} alt={image.alt} />
                         ))}
                     </div>
