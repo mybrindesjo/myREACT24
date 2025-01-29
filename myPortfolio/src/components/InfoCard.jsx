@@ -11,6 +11,7 @@ function InfoCard({ imgSrc, imgAlt, title, subtitle, date, extraContent }) {
                 {extraContent}
             </div>
         </article>
+
     );
 }
 

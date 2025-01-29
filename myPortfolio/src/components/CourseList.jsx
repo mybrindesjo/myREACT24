@@ -7,6 +7,7 @@ function CourseList({ courses }) {
                 <li key={index}>{course}</li>
             ))}
         </ul>
+        
     );
 }
 
