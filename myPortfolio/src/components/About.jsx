@@ -5,6 +5,7 @@ import ExperienceCard from './ExperienceCard'; // Import the new ExperienceCard 
 import SkillList from './SkillList'; // Import the new SkillList component
 import CourseList from './CourseList'; // Import the new CourseList component
 
+
 function About() {
     return (
         <main>

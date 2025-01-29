@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ProjectCard from './ProjectCard';
 import ProjectSection from './ProjectSection';
 import SkillsSection from './SkillsSection';
@@ -17,8 +17,8 @@ function Stalltid() {
             title: "Design",
             description: "Ett färg- och typografi-moodboard för att hitta rätt känsla för appen. Mjuka, naturnära färger och lättlästa typsnitt för att skapa en inbjudande och harmonisk känsla. Logotyp för att förstärka appens identitet.",
             images: [
-                { src: "./img/färg.png", alt: "color" },
-                { src: "./img/Skärmavbild 2025-01-16 kl. 09.45.05.png", alt: "typography" }
+                { src: "./img/color.png", alt: "color" },
+                { src: "./img/typescript.png", alt: "typescript" }
             ]
         }
     ];
@@ -79,6 +79,31 @@ function Stalltid() {
     const skills = [
         "Figma", "UI-design", "Användbarhet", "Logotypdesign", "Designtänkande", "Användarvänlig", "Wireframing", "Grupparbete", "Dokumentation", "Visuell design", "Analytisk förmåga", "Designmönster", "Projektplanering", "Typografi", "Färgteori", "Användarorienterad design", "Web Content Accessibility Guidelines (WCAG)", "Prototyping"
     ];
+
+    useEffect(() => {
+        const handleToggle = (event) => {
+            const button = event.target;
+            const details = button.parentElement.nextElementSibling;
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.style.display = 'block';
+                button.textContent = '-';
+            } else {
+                details.style.display = 'none';
+                button.textContent = '+';
+            }
+        };
+
+        const buttons = document.querySelectorAll('.toggle-btn');
+        buttons.forEach((button) => {
+            button.addEventListener('click', handleToggle);
+        });
+
+        return () => {
+            buttons.forEach((button) => {
+                button.removeEventListener('click', handleToggle);
+            });
+        };
+    }, []);
 
     return (
         <main>

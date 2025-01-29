@@ -4,7 +4,7 @@ function SocialLinks() {
     return (
         <div className="social-links">
             <a href="mailto:my.brindesjo@gmail.com">
-                <img src="./icon/gmail.png" alt="Figma" className="social-img" width="50" height="50" />
+                <img src="./img/gmail.png" alt="Gmail" className="social-img" width="50" height="50" />
             </a>
             <a href="https://github.com/mybrindesjo/myUXF24" target="_blank">
                 <img src="./img/github.png" alt="Github" className="social-img" width="50" height="50" />

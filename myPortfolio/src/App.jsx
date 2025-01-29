@@ -7,13 +7,14 @@ import Contact from './components/Contact';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-import './App.css';
+import './index.css';
 
 function App() {
     return (
         <Router>
             <Header />
             <Routes>
+                <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects />} />
