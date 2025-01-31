@@ -60,6 +60,7 @@ const Stalltid = () => {
                     <div className="project-header">
                         <h2>Prototyp</h2>
                     </div>
+                    <div className='projects'>
                     <div className="project">
                         <div className="row">
                             <h3>Vit/Blå</h3>
@@ -136,6 +137,7 @@ const Stalltid = () => {
                             <img className="project-img" src="./img/projects/project1/17.png" alt=""/>
                             <img className="project-img" src="./img/projects/project1/18.png" alt=""/>
                         </div>
+                    </div>
                     </div>
                 </section>
             </main>
