@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Game from "./pages/Game";
 import Contact from "./pages/Contact";
-import Pokemons from "./pages/Pokemons";
+import PokemonsListSwr from "./pages/PokemonsListSwr";
 
 const App = () => {
   return (
@@ -14,7 +14,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/game" element={<Game />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/pokemons" element={<Pokemons />} />
+        <Route path="/pokemons" element={<PokemonsListSwr />} />
       </Routes>
     </>
   );
