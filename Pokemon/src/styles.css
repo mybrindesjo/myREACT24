@@ -121,3 +121,24 @@ ul {
   transform: scale(1.1);
 }
 
+<<<<<<< HEAD
+=======
+.pokemons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #263238;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  align-items: center;
+  justify-content: space-between;
+}
+>>>>>>> 04e3294640f0568ac9ebfdd4ef7c9cf247a834db

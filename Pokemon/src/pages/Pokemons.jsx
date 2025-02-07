@@ -40,8 +40,14 @@ const Pokemons = () => {
   return (
     <div className="pokemons-container">
       {pokemons.map((pokemon) => (
+<<<<<<< HEAD
         <div key={pokemon.name}>
           <p>{pokemon.name}</p>
+=======
+        <div key={pokemon.name} className="pokemon-card">
+          <p>{pokemon.name}</p>
+          <img src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name}.gif`} alt={pokemon.name} />
+>>>>>>> 04e3294640f0568ac9ebfdd4ef7c9cf247a834db
         </div>
       ))}
     </div>
